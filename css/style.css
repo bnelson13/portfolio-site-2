@@ -2,51 +2,74 @@
     border: 0;
     margin: 0;
     padding: 0;
+    font-family: 'Cairo', sans-serif;
+    /* border: .5px solid gray; */
 }
 
-html {
-    background: url('/img/dark-background.png') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+/* #3498DB */
+
+body {
+    height: 3000px;
 }
 
-@font-face {
-    font-family: neon;
-    src: url('/fonts/hello-denver-display/hellodenverdisplayregular_v1.6.ttf');
-  }
-
-.wrapper {
-    margin: 160px 0 0 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.welcome {
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(
+        -25deg,
+        #EE7752 0%,
+        #ED6B5B 8.1%,
+        #EB5F64 15.5%,
+        #EA546C 22.5%,
+        #E84875 29%,
+        #E73C7E 35.3%,
+        #C0518F 41.2%,
+        #9966A1 47.1%,
+        #717CB2 52.9%,
+        #4A91C4 58.8%,
+        #23A6D5 64.7%,
+        #23AFCD 71%,
+        #23B9C4 77.5%,
+        #23C2BC 84.5%,
+        #23CCB3 91.9%,
+        #23D5AB 100%
+      );
+    background-size: 400% 400%;
+    position: relative;
+    animation: bgChange 120s ease-in-out infinite;
+    display: grid;
+    justify-items: center;
+    align-content: center;
 }
 
-.neon-wrapper {
-    box-shadow:
-        0 0 0.1vw  0.4vw #fff7f7,   
-        0 0 0.4vw  0.6vw #e97272, 
-        0 0   4vw  0.4vw #e50b0b,
-        inset 0 0 1.5vw  0.4vw #e50b0b,
-        inset 0 0 0.4vw  0.2vw #e97272,
-        inset 0 0 0.5vw  0.2vw #fff7f7;
-    border-radius: 1.5rem;
-    text-align: center;
+@keyframes bgChange {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
 }
 
-.neon-text {
-    padding: 2rem 3.5rem;
-    font-size: 6rem;
-    color: #ffd8d8;
-    font-family: neon;
-    text-shadow:
-        .1vw 0vw .25vw #ffd8d8, .2vw 0vw .25vw #ffd8d8, .4vw 0vw .25vw #ffd8d8, 
-        .1vw 0vw   0vw #f25757, .2vw 0vw   0vw #f25757, .4vw 0vw   0vw #f25757,
-        .1vw 0vw  .1vw #f25757, .2vw 0vw  .1vw #f25757, .4vw 0vw  .1vw #f25757,
-        .1vw 0vw   2vw #f25757, .2vw 0vw   2vw #f25757, .4vw 0vw   2vw #f25757, 
-        .1vw 0vw   1vw #e50b0b, .2vw 0vw   1vw #e50b0b, .4vw 0vw   5vw #e50b0b, 
-        .1vw 0vw   5vw #e50b0b, .2vw 0vw  20vw #e50b0b, .4vw 0vw  10vw #e50b0b,
-        .1vw 0vw  10vw #e50b0b, .2vw 0vw  30vw #e50b0b, .4vw 0vw  10vw #e50b0b;
+.welcome-svg{
+    position: absolute;
+    bottom: 0;
 }
+
+@keyframes blink { 
+    50% { border-right: 7px solid #FFF; border-left: 7px solid rgba(255, 255, 255, 0) } 
+ }
+
+.typewrite {
+    color: white;
+    padding: 0 10px;
+    font-size: 5rem;
+    line-height: 60px;
+    animation: blink .5s step-end infinite alternate;
+}
+
+
+
