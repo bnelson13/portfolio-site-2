@@ -5,17 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Brad Nelson</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <title>// BRAD NELSON</title>
 </head>
 <body>
-    <section class="welcome">
-        <div class="welcome-hello">
-            <h1 class='typewrite'>&nbsp</h1>
+    <section class="welcome" id='top-link'>
+        <div class="nav-bar">
+            <ul>
+                <li><a href="#about-link">About</a></li>
+                <li><a href="#resume-link">Resume</a></li>
+                <li><a href="#portfolio-link">Portfolio</a></li>
+                <li><a href="#contact-link">Contact</a></li>
+            </ul>
         </div>
+        <div class="welcome-hello">
+            <h1 id='typewrite'>&nbsp</h1>
+        </div>
+        <a id='welcome-down-link' href="#about-link">
+            <svg class='welcome-down-svg-off' xmlns="http://www.w3.org/2000/svg" width='35' height='16' id='down-svg'>
+                <path d='M33.527 1.263L17.263 14.107 1 1.263' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'></path>
+            </svg>
+        </a>
         <svg class='welcome-svg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#ffffff" fill-opacity="1" d="M0,224L48,224C96,224,192,224,288,234.7C384,245,480,267,576,266.7C672,267,768,245,864,208C960,171,1056,117,1152,101.3C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
         </svg>
     </section>
+    <section class="about-section space-section">
+        <div class="section-header" id='about-link'>
+            <h1>About Me</h1>
+        </div>
+        <div class="section-about">
+            <p>I am a front-end developer with a sincere<br> passion for creating intuitive, dynamic design</p>
+        </div>
+        <div class="about-info-wrap">
+            <div class="about-info-left">
+                <p>Upon graduating from the Colorado College and then the Culinary Instute of America I worked in the hospitality industry for several years before beginning my career in Web Development. I am currently a self-employed freelance developer looking for a full time position. I have experience with:</p>
+                
+            </div>
+            <div class="about-info-right">
+                <div class="circle-wrap">
+                    <img id="brads-face" src="./img/brad-face.png" alt="Brad's Face">
+                </div>
+                <!-- <lottie-player src='https://assets4.lottiefiles.com/packages/lf20_ZlVLvs.json' background='transparent' speed="1"  style="width: 300px; height: 300px;" loop autoplay></lottie-player> -->
+            </div>
+        </div>
+        
+    </section>
+    <section class="resume-section space-section">
+        <div class="section-header" id='resume-link'>
+            <h1>Resume</h1>
+        </div>
+    </section>
+    <section class="portfolio-section space-section">
+        <div class="section-header" id='portfolio-link'>
+            <h1>Portfolio</h1>
+        </div>
+    </section>
+    <section class="contact-section space-section">
+        <div class="section-header" id='contact-link'>
+            <h1>Contact Me</h1>
+        </div>
+    </section>
+    <a id='top-link-button' href="#top-link">
+        <svg class='top-link-svg' xmlns="http://www.w3.org/2000/svg" width='35' height='16'>
+            <path d='M33.527 1.263L17.263 14.107 1 1.263' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'></path>
+        </svg>
+    </a>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src='./js/app.js'></script>
 </body>
 </html>

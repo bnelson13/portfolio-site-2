@@ -6,10 +6,8 @@
     /* border: .5px solid gray; */
 }
 
-/* #3498DB */
-
-body {
-    height: 3000px;
+.space-section {
+    height: 200px;
 }
 
 .welcome {
@@ -42,6 +40,36 @@ body {
     align-content: center;
 }
 
+.welcome-hello {
+    margin-top: -100px;
+}
+
+.nav-bar {
+    position: absolute;
+    font-family: Cairo;
+    font-size: 16px;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    margin: 15px 0;
+}
+
+.nav-bar ul li {
+    letter-spacing: .05em;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    padding: 0 30px;
+    color: white;
+}
+
+.nav-bar ul li a:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
 @keyframes bgChange {
     0%{
         background-position: 0 50%;
@@ -59,17 +87,105 @@ body {
     bottom: 0;
 }
 
-@keyframes blink { 
-    50% { border-right: 7px solid #FFF; border-left: 7px solid rgba(255, 255, 255, 0) } 
- }
+#welcome-down-link {
+    position: absolute;
+    margin-top: 500px;
+    z-index: 2;
+}
 
-.typewrite {
+.welcome-down-svg {
+    stroke: #ffffff;
+}
+.welcome-down-svg:hover {
+    stroke: #ffffffad;
+}
+
+#top-link-button {
+    z-index: 2;
+    position: fixed;
+    margin-top: 50px;
+}
+
+.top-link-svg{
+    stroke: black;
+}
+
+#typewrite {
+    font-size: 5rem;
     color: white;
     padding: 0 10px;
-    font-size: 5rem;
-    line-height: 60px;
+    overflow: hidden;
     animation: blink .5s step-end infinite alternate;
 }
 
+.is-hidden[style] {
+    display: none !important;
+}
 
+.about-section * {
+    /* border: 1px solid lightblue; */
+}
+
+.about-section {
+    height: 700px;
+}
+
+.about-info-wrap {
+    display: flex;
+    height: 400px;
+    margin: 0 100px;
+}
+
+.about-info-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.circle-wrap {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0);
+    border-radius: 50%;
+}
+
+#brads-face {
+    height: 200px;
+}
+
+.about-info-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    letter-spacing: .08em;
+    color: rgb(44, 44, 44);
+}
+
+.section-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-header h1 {
+    color: #3498DB;
+    font-size: 50px;
+
+}
+
+.section-about {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: 18px;
+    color: rgb(92, 92, 92);
+}
 
