@@ -3,14 +3,13 @@
     margin: 0;
     padding: 0;
     font-family: 'Cairo', sans-serif;
-    /* border: .5px solid gray; */
 }
 
 .space-section {
     height: 200px;
 }
 
-.welcome {
+.welcome-section {
     width: 100%;
     height: 700px;
     background: linear-gradient(
@@ -62,7 +61,7 @@
 
 .nav-bar ul li a {
     text-decoration: none;
-    padding: 0 30px;
+    padding: 0 50px;
     color: white;
 }
 
@@ -82,15 +81,23 @@
     }
 }
 
-.welcome-svg{
+.svg-div {
     position: absolute;
     bottom: 0;
+    width: 100%;
+    height: 150px;
+}
+
+.svg-div svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
 }
 
 #welcome-down-link {
     position: absolute;
     margin-top: 500px;
-    z-index: 2;
 }
 
 .welcome-down-svg {
@@ -103,11 +110,19 @@
 #top-link-button {
     z-index: 2;
     position: fixed;
-    margin-top: 50px;
+    bottom: 25px;
+    right: 50px;
+    opacity: .2;
+    display: none;
+}
+
+#top-link-button:hover {
+    opacity: .5;
 }
 
 .top-link-svg{
     stroke: black;
+    transform: rotate(180deg);
 }
 
 #typewrite {
@@ -122,18 +137,14 @@
     display: none !important;
 }
 
-.about-section * {
-    /* border: 1px solid lightblue; */
-}
-
 .about-section {
     height: 700px;
 }
 
 .about-info-wrap {
     display: flex;
-    height: 400px;
-    margin: 0 100px;
+    height: 300px;
+    margin: 90px 150px;
 }
 
 .about-info-right {
@@ -189,3 +200,394 @@
     color: rgb(92, 92, 92);
 }
 
+.info-card {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transform: translateY(55px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.active-observe {
+    transform: translateY(-55px);
+    opacity: 1;
+}
+
+.info-card-heading {
+    background: linear-gradient(
+        -25deg,
+        #EE7752 0%,
+        #ED6B5B 8.1%,
+        #EB5F64 15.5%,
+        #EA546C 22.5%,
+        #E84875 29%,
+        #E73C7E 35.3%,
+        #C0518F 41.2%,
+        #9966A1 47.1%,
+        #717CB2 52.9%,
+        #4A91C4 58.8%,
+        #23A6D5 64.7%,
+        #23AFCD 71%,
+        #23B9C4 77.5%,
+        #23C2BC 84.5%,
+        #23CCB3 91.9%,
+        #23D5AB 100%
+      );
+    padding: 10px;
+    background-size: 400% 400%;
+    animation: bgChange 120s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.info-card-icon img {
+    height: 60px;
+}
+
+.resume-section {
+    position: relative;
+    height: 500px;
+}
+
+.resume-timeline {
+    display: flex;
+    margin: 90px 150px;
+}
+
+.timeline-svg {
+    transform: translateY(-135px);
+}
+
+.resume-item {
+    transform: translateY(55px);
+    text-align: center;
+    opacity: 0;
+    padding: 0 40px;
+    transition: all 1s ease;
+}
+
+.resume-item h4 {
+    color: #3498DB;
+}
+
+.resume-item p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 40px 0;
+}
+
+#resume-svg-bottom {
+    transform: rotate(180deg) translateY(-150px);
+    position: absolute;
+    z-index: 1;
+}
+
+.resume-pdf {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+    justify-content: center;
+    transform: translateY(-120px);
+}
+
+#resume-button {
+    margin: 0 auto;
+    z-index: 5;
+    background: linear-gradient(
+        -25deg,
+        #EE7752 0%,
+        #ED6B5B 8.1%,
+        #EB5F64 15.5%,
+        #EA546C 22.5%,
+        #E84875 29%,
+        #E73C7E 35.3%,
+        #C0518F 41.2%,
+        #9966A1 47.1%,
+        #717CB2 52.9%,
+        #4A91C4 58.8%,
+        #23A6D5 64.7%,
+        #23AFCD 71%,
+        #23B9C4 77.5%,
+        #23C2BC 84.5%,
+        #23CCB3 91.9%,
+        #23D5AB 100%
+      );
+    background-size: 400% 400%;
+    font-weight: 600;
+    animation: bgChange 120s ease-in-out infinite;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+#resume-button:hover {
+    color: #3498DB;
+    border: 1px solid #3498DB;
+    background: white;
+    font-weight: 700;
+}
+
+#resume-button:focus {
+    outline: 0;
+}
+
+.portfolio-section {
+    width: 100%;
+    height: 1200px;
+    background: linear-gradient(
+        -25deg,
+        #EE7752 0%,
+        #ED6B5B 8.1%,
+        #EB5F64 15.5%,
+        #EA546C 22.5%,
+        #E84875 29%,
+        #E73C7E 35.3%,
+        #C0518F 41.2%,
+        #9966A1 47.1%,
+        #717CB2 52.9%,
+        #4A91C4 58.8%,
+        #23A6D5 64.7%,
+        #23AFCD 71%,
+        #23B9C4 77.5%,
+        #23C2BC 84.5%,
+        #23CCB3 91.9%,
+        #23D5AB 100%
+      );
+    background-size: 400% 400%;
+    position: relative;
+    animation: bgChange 120s ease-in-out infinite;
+}
+
+#portfolio-link {
+    position: relative;
+    top: 150px;
+}
+
+#portfolio-link h1{
+    color: white;
+}
+
+.portfolio-cards {
+    margin: 0 150px;
+    transform: translateY(180px);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.portfolio-card {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    margin: 40px auto;
+    position: relative;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-pic {
+    width: 100%;
+    object-fit: cover;
+    object-position: 0px 0px;
+    height: 200px;
+    filter: brightness(75%) sepia(0%);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.portfolio-card .card-description {
+    /* background: white; */
+    /* display: block; */
+    /* position: absolute; */
+    /* height: 250px; */
+    /* width: 100%; */
+    padding: 0 15px 0 15px;
+}
+
+.portfolio-card-active {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    margin: 40px auto;
+    position: relative;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.portfolio-card-active .card-description {
+
+}
+
+.card-description h3 {
+    color: #3498DB;
+    font-weight: 600;
+}
+.card-description h4 {
+    font-weight: 400;
+    /* padding: 0 5px; */
+    color: rgb(88, 88, 88);
+}
+
+.card-description p {
+    font-size: 14px;
+    margin: 23px 0 15px 0;
+    /* transform: translateY(30px); */
+    line-height: 18px;
+}
+
+.portfolio-card:hover {
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.portfolio-card:hover img {
+    height: 100px;
+    filter: brightness(20%);
+    transform: scale(1.1); 
+}
+
+.card-button {
+    background: #3498DB;
+    color: white;
+    padding: 2px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+.contact-section {
+    position: relative;
+    height: 480px;
+}
+
+.face-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.face-img img {
+    height: 200px;
+}
+
+.contact-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icons ul{
+    list-style: none;
+    display: flex;
+}
+
+.contact-icons ul li {
+    margin: 0 20px;
+}
+
+.contact-icons img {
+    height: 40px;
+}
+
+.contact-icons img:hover {
+    opacity: .7;
+}
+
+.hover-info {
+    position: absolute;
+    font-size: 11px;
+    background: beige;
+    display: none;
+    border-radius: 5px;
+}
+
+.email-copy-info {
+    transform: translate(215px, -10px);
+}
+
+.phone-copy-info {
+    transform: translate(296px, -10px);
+}
+
+
+.contact-button img{
+    cursor: pointer;
+}
+
+.contact-hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    font-size: 20px;
+}
+
+#email-address {
+    display: none;
+    position: absolute;
+    transform: translateY(20px);
+}
+
+#phone-number{
+    display: none;
+    position: absolute;
+    transform: translateY(20px);
+}
+
+#contact-svg-bottom {
+    transform: rotate(180deg) translateY(-150px);
+    z-index: 2;
+}
+
+footer {
+    height: 300px;
+    width: 100%;
+    background: linear-gradient(
+        -25deg,
+        #EE7752 0%,
+        #ED6B5B 8.1%,
+        #EB5F64 15.5%,
+        #EA546C 22.5%,
+        #E84875 29%,
+        #E73C7E 35.3%,
+        #C0518F 41.2%,
+        #9966A1 47.1%,
+        #717CB2 52.9%,
+        #4A91C4 58.8%,
+        #23A6D5 64.7%,
+        #23AFCD 71%,
+        #23B9C4 77.5%,
+        #23C2BC 84.5%,
+        #23CCB3 91.9%,
+        #23D5AB 100%
+      );
+    background-size: 400% 400%;
+    position: relative;
+    animation: bgChange 120s ease-in-out infinite;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+
+#bottom-nav {
+    transform: translateY(180px);
+}

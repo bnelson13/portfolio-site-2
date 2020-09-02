@@ -9,10 +9,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
-    <title>// BRAD NELSON</title>
+    <title>Brad Nelson - Portfolio</title>
 </head>
 <body>
-    <section class="welcome" id='top-link'>
+    <section class="welcome-section" id='top-link'>
         <div class="nav-bar">
             <ul>
                 <li><a href="#about-link">About</a></li>
@@ -29,10 +29,13 @@
                 <path d='M33.527 1.263L17.263 14.107 1 1.263' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'></path>
             </svg>
         </a>
-        <svg class='welcome-svg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#ffffff" fill-opacity="1" d="M0,224L48,224C96,224,192,224,288,234.7C384,245,480,267,576,266.7C672,267,768,245,864,208C960,171,1056,117,1152,101.3C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
+        <div class="svg-div">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 150" preserveAspectRatio="none">
+                <path fill="#ffffff" fill-opacity="1" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path>
+            </svg>
+        </div>
     </section>
+
     <section class="about-section space-section">
         <div class="section-header" id='about-link'>
             <h1>About Me</h1>
@@ -41,39 +44,175 @@
             <p>I am a front-end developer with a sincere<br> passion for creating intuitive, dynamic design</p>
         </div>
         <div class="about-info-wrap">
-            <div class="about-info-left">
-                <p>Upon graduating from the Colorado College and then the Culinary Instute of America I worked in the hospitality industry for several years before beginning my career in Web Development. I am currently a self-employed freelance developer looking for a full time position. I have experience with:</p>
-                
+            <div class="info-card">
+                <div class="info-card-icon"><img src="./img/icon-html.png" alt="HTML/CSS"></div>
+                <div class="info-card-heading">HTML / CSS</div>
+                <div class="info-card-paragraph">Experience structruing websites with HTML and design concepts using CSS, SVG and animations. Have applied color theory and UI/UX concepts to further my web design capabilities</div>
             </div>
-            <div class="about-info-right">
-                <div class="circle-wrap">
-                    <img id="brads-face" src="./img/brad-face.png" alt="Brad's Face">
-                </div>
-                <!-- <lottie-player src='https://assets4.lottiefiles.com/packages/lf20_ZlVLvs.json' background='transparent' speed="1"  style="width: 300px; height: 300px;" loop autoplay></lottie-player> -->
+            <div class="info-card">
+                <div class="info-card-icon"><img src="./img/icon-javascript.png" alt="Javascript"></div>
+                <div class="info-card-heading">Javascript</div>
+                <div class="info-card-paragraph">Experience with JavaScript and Node.js, asynchornous programming, Webpack bundler, server-side framwork Express, and learning to develop web-based applications in React</div>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon"><img src="/img/icon-management.png" alt="Management"></div>
+                <div class="info-card-heading">Management</div>
+                <div class="info-card-paragraph">Experience with project development & management, oversaw a team of junior managers and 60+ employees, self-started 2 companies, and honed presentation skills</div>
             </div>
         </div>
-        
     </section>
+
     <section class="resume-section space-section">
         <div class="section-header" id='resume-link'>
             <h1>Resume</h1>
         </div>
+        <div class="section-about">
+            <p>My background in hospitality has made me value<br> service along with hard work and perserverance</p>
+        </div>
+        <div class="resume-timeline">
+            <div class="resume-item">
+                <h4>Owner</h4>
+                <p>Fresh Eats Catering serviced Colorado business with deliveries up to 100 people with fresh, organic breakfast and lunch options</p>
+            </div>
+            <div class="resume-item">
+                <h4>Manager</h4>
+                <p>Managed 3 sepearte departments at Hyatt Corporation including the restuarant, bar and in room dining as well as reservations</p>
+            </div>
+            <div class="resume-item">
+                <h4>Developer</h4>
+                <p>Building websites for clients using HTML, CSS, JavaScript, Node.js, Webpack, Express, and soon web applications using React.js</p>
+            </div>
+        </div>
+        <svg class='timeline-svg' xmlns="http://www.w3.org/2000/svg" height="30px" width="100%">
+            <circle id='circ1' cx="25%" cy="50%" r="0" fill="#3498DB"/>
+            <rect id='rect1' x="25%" y="50%" width="0%" height="5%" fill="#3498DB" />
+            <circle id='circ2' cx="50%" cy="50%" r="0" fill="#3498DB"/>
+            <rect id='rect2' x="50%" y="50%" width="0%" height="5%" fill="#3498DB" />
+            <circle id='circ3' cx="75%" cy="50%" r="0" fill="#3498DB"/>
+            <animate xlink:href='#circ1' attributeName='r' from='0' to='10' dur='.5s' begin='indefinite' id='circ1a' fill='freeze' />
+            <animate xlink:href='#rect1' attributeName='width' from='0%' to='25%' dur='1s' begin='circ1a.end' id='rect1a' fill='freeze' />
+            <animate xlink:href='#circ2' attributeName='r' from='0' to='10' dur='.5s' begin='rect1a.end' id='circ2a' fill='freeze' />
+            <animate xlink:href='#rect2' attributeName='width' from='0%' to='25%' dur='1s' begin='circ2a.end' id='rect2a' fill='freeze' />
+            <animate xlink:href='#circ3' attributeName='r' from='0' to='10' dur='.5s' begin='rect2a.end' id='circ3a' fill='freeze' />
+        </svg>
+        <div class="resume-pdf">
+            <button id='resume-button'>View Resume</button>
+        </div>
+        <div class="svg-div" id='resume-svg-bottom'>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 150" preserveAspectRatio="none">
+                <path fill="#ffffff" fill-opacity="1" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path>
+            </svg>
+        </div>
     </section>
+
     <section class="portfolio-section space-section">
         <div class="section-header" id='portfolio-link'>
             <h1>Portfolio</h1>
         </div>
+        <div class="portfolio-cards">
+            <div class="portfolio-card" id="card-1">
+                <img class='card-pic' src="/img/card-weekstrend.png" alt="">
+                <div class="card-description">
+                    <h3>Weekstrend</h3>
+                    <h4>A weekly curated lifestyle blog</h4>
+                    <p>A weekly blog that is a curated list of different mediums with popular or intersting links.</p>
+                    <button id='buttonOne' tabindex="1" class='card-button'>Visit Website</button>
+                    <button class='card-button'>Visit GitHub</button>
+                </div>
+            </div>
+            <div class="portfolio-card-active" id="card-2">
+                <img class='card-pic' src="/img/card-trip.png" alt="">
+                <div class="card-description">
+                    <h3>Trip Planner</h3>
+                </div>
+            </div>
+            <div class="portfolio-card" id="card-3">
+                <img class='card-pic' src="/img/card-spruce.png" alt="">
+                <div class="card-description">
+                    <h3>Spruce Sauce</h3>
+                </div>
+            </div>
+            <div class="portfolio-card" id="card-4">
+                <img class='card-pic' src="/img/card-hcp.png" alt="">
+                <div class="card-description">
+                    <h3>HCP</h3>
+                </div>
+            </div>
+            <div class="portfolio-card" id="card-5">
+                <img class='card-pic' src="/img/card-evaluate.png" alt="">
+                <div class="card-description">
+                    <h3>Article Evaluater</h3>
+                </div>
+            </div>
+            <div class="portfolio-card" id="card-6">
+                <img class='card-pic' src="/img/card-apteryx.png" alt="">
+                <div class="card-description">
+                    <h3>Apteryx Designs</h3>
+                </div>
+            </div>
+        </div>
+        <div class="svg-div" id='portfolio-svg-bottom'>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 150" preserveAspectRatio="none">
+                <path fill="#ffffff" fill-opacity="1" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path>
+            </svg>
+        </div>
     </section>
+
     <section class="contact-section space-section">
         <div class="section-header" id='contact-link'>
             <h1>Contact Me</h1>
         </div>
+        <div class="face-img">
+            <img src="/img/brads-face.png" title="Brad's Face">
+        </div>
+        <div class="contact-icons">
+            <ul>
+                <li><a href="https://github.com/bnelson13" target="_blank">
+                    <img src="/img/logo-github.png" alt="Github Logo">
+                </a></li>
+                <li><a href="https://www.linkedin.com/in/bnelson13/" target="_blank">
+                    <img src="/img/logo-linkedin.png" alt="LinkedIn Logo">
+                </a></li>
+                <li><div class='contact-button' id="email-hover">
+                    <img src="/img/logo-email.png" alt="Copy to Clipboard">
+                </div></li>
+                <p class="hover-info email-copy-info">Click to copy to Clipboard</p>
+                <li><div class='contact-button' id='phone-hover'>
+                    <img src="/img/logo-phone.png" alt="Copy to Clipboard">
+                </div></li>
+                <p class="hover-info phone-copy-info">Click to copy to Clipboard</p>
+                <li><a href="https://www.instagram.com/nelsonbrad/" target="_blank">
+                    <img src="/img/logo-instagram.png" alt="Instagram Logo">
+                </a></li>
+            </ul>
+        </div>
+        <div class="contact-hover">
+            <p id='email-address'>bnelson13@gmail.com</p>
+            <p id="phone-number">303.884.5392</p>
+        </div>
+        <div class="svg-div" id='contact-svg-bottom'>
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 150" preserveAspectRatio="none">
+                <path fill="#ffffff" fill-opacity="1" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path>
+            </svg>
+        </div>
     </section>
+
     <a id='top-link-button' href="#top-link">
         <svg class='top-link-svg' xmlns="http://www.w3.org/2000/svg" width='35' height='16'>
             <path d='M33.527 1.263L17.263 14.107 1 1.263' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'></path>
         </svg>
     </a>
+
+    <footer>
+        <div class="nav-bar" id="bottom-nav">
+            <ul>
+                <li><a href="#about-link">About</a></li>
+                <li><a href="#resume-link">Resume</a></li>
+                <li><a href="#portfolio-link">Portfolio</a></li>
+                <li><a href="#contact-link">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
