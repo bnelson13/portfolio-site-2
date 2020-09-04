@@ -136,25 +136,3 @@ phoneButton.onmouseout = () => {
 phoneButton.onclick = () => {
     copyToClipboard('3038845392');
 }
-
-let cardButtons = document.querySelectorAll('.card-button');
-let cardDescriptions = document.querySelectorAll('.card-description');
-// cardButton = cardButtons[0];
-// console.log(cardButton);
-
-// let buttonOne = document.querySelector('#buttonOne');
-// console.log(buttonOne.innerHTML);
-// window.setTimeout(function ()
-// {
-// buttonOne.focus({preventScroll: true});
-// },0);
-// cardButtons[0].focus({preventScroll: true});
-cardButtons.forEach(ele => {
-    ele.preventDefault;
-    ele.focus({preventScroll: true})
-})
-
-cardDescriptions.forEach(ele => {
-    ele.preventDefault;
-    ele.focus({preventScroll: true});
-})

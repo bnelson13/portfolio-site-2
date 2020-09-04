@@ -44,17 +44,17 @@
             <p>I am a front-end developer with a sincere<br> passion for creating intuitive, dynamic design</p>
         </div>
         <div class="about-info-wrap">
-            <div class="info-card">
+            <div class="info-card" id='info-card-1'>
                 <div class="info-card-icon"><img src="./img/icon-html.png" alt="HTML/CSS"></div>
                 <div class="info-card-heading">HTML / CSS</div>
                 <div class="info-card-paragraph">Experience structruing websites with HTML and design concepts using CSS, SVG and animations. Have applied color theory and UI/UX concepts to further my web design capabilities</div>
             </div>
-            <div class="info-card">
+            <div class="info-card" id='info-card-2'>
                 <div class="info-card-icon"><img src="./img/icon-javascript.png" alt="Javascript"></div>
                 <div class="info-card-heading">Javascript</div>
                 <div class="info-card-paragraph">Experience with JavaScript and Node.js, asynchornous programming, Webpack bundler, server-side framwork Express, and learning to develop web-based applications in React</div>
             </div>
-            <div class="info-card">
+            <div class="info-card" id='info-card-3'>
                 <div class="info-card-icon"><img src="/img/icon-management.png" alt="Management"></div>
                 <div class="info-card-heading">Management</div>
                 <div class="info-card-paragraph">Experience with project development & management, oversaw a team of junior managers and 60+ employees, self-started 2 companies, and honed presentation skills</div>
@@ -109,6 +109,16 @@
         <div class="section-header" id='portfolio-link'>
             <h1>Portfolio</h1>
         </div>
+        <svg class="defs-only">
+            <filter id="monochrome" color-interpolation-filters="sRGB"
+                    x="0" y="0" height="100%" width="100%">
+              <feColorMatrix type="matrix"
+                values="0.95 0 0 0 0.05 
+                        0.85 0 0 0 0.15  
+                        0.50 0 0 0 0.50 
+                        0    0 0 1 0" />
+            </filter>
+        </svg>
         <div class="portfolio-cards">
             <div class="portfolio-card" id="card-1">
                 <img class='card-pic' src="/img/card-weekstrend.png" alt="">
@@ -116,38 +126,56 @@
                     <h3>Weekstrend</h3>
                     <h4>A weekly curated lifestyle blog</h4>
                     <p>A weekly blog that is a curated list of different mediums with popular or intersting links.</p>
-                    <button id='buttonOne' tabindex="1" class='card-button'>Visit Website</button>
-                    <button class='card-button'>Visit GitHub</button>
+                    <a href='https://www.weekstrend.com/' target="_blank" class='card-button'>Visit Website</a>
+                    <a href='https://github.com/bnelson13/weeks-trend' target="_blank" class='card-button'>Visit GitHub</a>
                 </div>
             </div>
-            <div class="portfolio-card-active" id="card-2">
+            <div class="portfolio-card" id="card-2">
                 <img class='card-pic' src="/img/card-trip.png" alt="">
                 <div class="card-description">
                     <h3>Trip Planner</h3>
+                    <h4>A weekly curated lifestyle blog</h4>
+                    <p>A weekly blog that is a curated list of different mediums with popular or intersting links.</p>
+                    <a href='https://github.com/bnelson13/travel-app' target="_blank" class='card-button'>Visit GitHub</a>
                 </div>
             </div>
             <div class="portfolio-card" id="card-3">
                 <img class='card-pic' src="/img/card-spruce.png" alt="">
                 <div class="card-description">
                     <h3>Spruce Sauce</h3>
+                    <h4>A weekly curated lifestyle blog</h4>
+                    <p>A weekly blog that is a curated list of different mediums with popular or intersting links.</p>
+                    <a href='https://www.sprucesauce.ga/' target="_blank" class='card-button'>Visit Website</a>
+                    <a href='https://github.com/bnelson13/spruce-sauce' target="_blank" class='card-button'>Visit GitHub</a>
                 </div>
             </div>
             <div class="portfolio-card" id="card-4">
                 <img class='card-pic' src="/img/card-hcp.png" alt="">
                 <div class="card-description">
                     <h3>HCP</h3>
+                    <h4>A weekly curated lifestyle blog</h4>
+                    <p>A weekly blog that is a curated list of different mediums with popular or intersting links.</p>
+                    <a href='https://www.hcpricing.ga/' target="_blank" class='card-button'>Visit Website</a>
+                    <a href='https://www.github.com/' target="_blank" class='card-button'>Visit GitHub</a>
                 </div>
             </div>
             <div class="portfolio-card" id="card-5">
                 <img class='card-pic' src="/img/card-evaluate.png" alt="">
                 <div class="card-description">
                     <h3>Article Evaluater</h3>
+                    <h4>A weekly curated lifestyle blog</h4>
+                    <p>A weekly blog that is a curated list of different mediums with popular or intersting links.</p>
+                    <a href='https://github.com/bnelson13/evaluate-article' target="_blank" class='card-button'>Visit GitHub</a>
                 </div>
             </div>
             <div class="portfolio-card" id="card-6">
                 <img class='card-pic' src="/img/card-apteryx.png" alt="">
                 <div class="card-description">
                     <h3>Apteryx Designs</h3>
+                    <h4>A weekly curated lifestyle blog</h4>
+                    <p>A weekly blog that is a curated list of different mediums with popular or intersting links.</p>
+                    <a href='https://www.apteryx.ga/' target="_blank" class='card-button'>Visit Website</a>
+                    <a href='https://www.github.com/' target="_blank" class='card-button'>Visit GitHub</a>
                 </div>
             </div>
         </div>

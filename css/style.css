@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Cairo', sans-serif;
+    /* border: 1px solid lightgray; */
 }
 
 .space-section {
@@ -143,8 +144,9 @@
 
 .about-info-wrap {
     display: flex;
+    max-width: 1115px;
     height: 300px;
-    margin: 90px 150px;
+    margin: 90px auto;
 }
 
 .about-info-right {
@@ -205,13 +207,13 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    transform: translateY(55px);
+    transform: translateY(15px);
     opacity: 0;
     transition: all 1s ease;
 }
 
 .active-observe {
-    transform: translateY(-55px);
+    transform: translateY(-35px);
     opacity: 1;
 }
 
@@ -256,7 +258,8 @@
 
 .resume-timeline {
     display: flex;
-    margin: 90px 150px;
+    max-width: 1115px;
+    margin: 90px auto;
 }
 
 .timeline-svg {
@@ -380,8 +383,13 @@
     color: white;
 }
 
+.defs-only {
+    display: none;
+}
+
 .portfolio-cards {
-    margin: 0 150px;
+    max-width: 1115px;
+    margin: 0 auto;
     transform: translateY(180px);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -395,43 +403,45 @@
     margin: 40px auto;
     position: relative;
     background-color: white;
-    border-radius: 3px;
+    border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
+.portfolio-card:hover {
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.portfolio-card:hover .card-pic{
+    height: 100px;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.portfolio-card:hover .card-button {
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    display: inline-block;
+}
+
+.portfolio-card:hover p {
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    display: block;
+}
+
 .card-pic {
+    filter:  url(#monochrome);
+    height: 200px;
     width: 100%;
     object-fit: cover;
-    object-position: 0px 0px;
-    height: 200px;
-    filter: brightness(75%) sepia(0%);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    object-position: 0px 0px; 
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);  
 }
 
-.portfolio-card .card-description {
-    /* background: white; */
-    /* display: block; */
-    /* position: absolute; */
-    /* height: 250px; */
-    /* width: 100%; */
+.card-description {
     padding: 0 15px 0 15px;
-}
-
-.portfolio-card-active {
-    height: 300px;
-    width: 300px;
-    overflow: hidden;
-    margin: 40px auto;
-    position: relative;
-    background-color: white;
-    border-radius: 3px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.portfolio-card-active .card-description {
-
+    width: 100%;
+    height: 100px;
+    position: absolute;
 }
 
 .card-description h3 {
@@ -440,26 +450,15 @@
 }
 .card-description h4 {
     font-weight: 400;
-    /* padding: 0 5px; */
     color: rgb(88, 88, 88);
 }
 
 .card-description p {
     font-size: 14px;
     margin: 23px 0 15px 0;
-    /* transform: translateY(30px); */
     line-height: 18px;
-}
-
-.portfolio-card:hover {
+    display: none;
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-
-.portfolio-card:hover img {
-    height: 100px;
-    filter: brightness(20%);
-    transform: scale(1.1); 
 }
 
 .card-button {
@@ -469,8 +468,11 @@
     border-radius: 5px;
     cursor: pointer;
     overflow: hidden;
+    display: none;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    text-decoration: none;
+    font-size: 14px;
 }
-
 
 .contact-section {
     position: relative;
@@ -590,4 +592,116 @@ footer {
 
 #bottom-nav {
     transform: translateY(180px);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .nav-bar ul li a {
+        padding: 0 30px;
+    }
+
+    .about-info-wrap {
+        display: block;
+        max-width: 500px;
+    }
+    #info-card-2 {
+        margin: 40px 0;
+    }
+    .about-section {
+        height: 1090px;
+    }
+    .resume-section {
+        height: 600px;
+    }
+    .resume-timeline {
+        display: block;
+        max-width: 400px;
+    }
+    .portfolio-cards {
+        grid-template-columns: 1fr;
+    }
+    .portfolio-section {
+        height: 2800px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .nav-bar ul li a {
+        padding: 0 50px;
+    }
+
+    .about-info-wrap {
+        display: block;
+        max-width: 500px;
+    }
+    #info-card-2 {
+        margin: 40px 0;
+    }
+    .about-section {
+        height: 1090px;
+    }
+    .resume-timeline {
+        display: flex;
+        max-width: 1115px;
+    }
+    .timeline-svg {
+        display: none;
+    }
+    .resume-section {
+        height: 500px;
+    }
+    .portfolio-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    .portfolio-section {
+        height: 1600px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .info-card {
+        width: 357px;
+    }
+
+    #info-card-2 {
+        position: absolute;
+        margin-top: 200px;
+        /* transform: translateY(150px); */
+    }
+
+    .about-info-wrap {
+        display: flex;
+        justify-content: space-around;
+        max-width: 1115px;
+    }
+    .about-section {
+        height: 800px;
+    }
+
+    .portfolio-cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .portfolio-section {
+        height: 1200px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #info-card-1, #info-card-2, #info-card-3 {
+        transform: translate(0px, 55px);
+        margin: 0;
+        position: relative;
+    }
+    .about-section {
+        height: 600px;
+    }
 }
