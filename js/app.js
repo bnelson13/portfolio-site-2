@@ -22,7 +22,6 @@ $('#typewrite').typeIt({
 
 setTimeout(function() {$('#typewrite').find('.ti-cursor').addClass('is-hidden')}, 16300);
 setTimeout(function() {document.querySelector('#down-svg').classList = 'welcome-down-svg'}, 16300)
-
 let anchorLinks = document.querySelectorAll('a[href^="#"]')
 for (let anchorLink of anchorLinks) { 
     anchorLink.addEventListener('click', (e)=> {
@@ -39,43 +38,31 @@ for (let anchorLink of anchorLinks) {
 
 let infoCards = document.querySelectorAll('.info-card');
 let resumeCards = document.querySelectorAll('.resume-item')
+const navBar = document.querySelector('.nav-bar');
+const aboutSection = document.querySelector('.about-section')
 
-let observerOptions = {
-    rootMargin: '25px', 
-    threshold: 1.0
-}
+const options = {
+    root: null, //kept as viewport
+    threshold: 0, //between 0 -> 1
+    rootMargin: '-150px', 
+};
 
-const aboutIO = new IntersectionObserver(entries => {
-    entries.forEach(entry => {  
-        if (entry.intersectionRatio > 0.2) {
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = "translateY(-35px)";
-            aboutIO.unobserve(entry.target);
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if(!entry.isIntersecting) {
+            return;
         }
-    });
-}, observerOptions);
-
-const resLineIO = new IntersectionObserver((entry) => {
-    if (entry.intersectionRatio > 0.2) {
-        go();
-        console.log('resumeintersection');
-        resLineIO.unobserve(resumeCards[0]);
-    }
-})
-
-resLineIO.observe(resumeCards[0]);
-
-function go () {
-    var elements = document.getElementsByTagName("animate");
-    elements[0].beginElement();
-}
+        entry.target.classList.add('card-active');
+        observer.unobserve(entry.target);
+    })
+}, options)
 
 for (let card of infoCards) {
-    aboutIO.observe(card);
+    observer.observe(card);
 }
 
 for (let card of resumeCards) {
-    aboutIO.observe(card);
+    observer.observe(card);
 }
 
 topButton = document.querySelector('#top-link-button');
@@ -84,8 +71,10 @@ const showButton = function() {
     let y = window.scrollY;
     if (y>200) {
         topButton.style.display = 'block';
+        navBar.classList.add('nav-highlight');
     } else {
         topButton.style.display = 'none';
+        navBar.classList.remove('nav-highlight');
     }
 }
 window.addEventListener('scroll', showButton);
@@ -96,11 +85,19 @@ resumePDF.addEventListener('click', () => {
     window.open('/src/Brad-Nelson-Resume.pdf', '_blank');
 })
 
-let emailButton = document.querySelector('#email-hover');
-let phoneButton = document.querySelector('#phone-hover');
-let emailAddress = document.querySelector('#email-address');
-let phoneNumber = document.querySelector('#phone-number');
-let copyInfo = document.querySelectorAll('.hover-info');
+const gitButton = document.querySelector('#git-hover');
+const linkedButton = document.querySelector('#linked-hover');
+const emailButton = document.querySelector('#email-hover');
+const phoneButton = document.querySelector('#phone-hover');
+const instaButton = document.querySelector('#insta-hover');
+
+const gitHub = document.querySelector('#git-hub');
+const linkedIn = document.querySelector('#linked-in');
+const emailAddress = document.querySelector('#email-address');
+const phoneNumber = document.querySelector('#phone-number');
+const instagram = document.querySelector('#instagram');
+
+const copyInfo = document.querySelectorAll('.hover-info');
 
 const copyToClipboard = str => {
     const el = document.createElement('textarea');
@@ -113,7 +110,18 @@ const copyToClipboard = str => {
     document.execCommand('copy');
     document.body.removeChild(el);
 };
-
+gitButton.onmouseover = () => {
+    gitHub.style.display = 'block';
+}
+gitButton.onmouseout = () => {
+    gitHub.style.display = 'none';
+}
+linkedButton.onmouseover = () => {
+    linkedIn.style.display = 'block';
+}
+linkedButton.onmouseout = () => {
+    linkedIn.style.display = 'none';
+}
 emailButton.onmouseover = () => {
     copyInfo[0].style.display = 'block';
     emailAddress.style.display='block';
@@ -135,4 +143,10 @@ phoneButton.onmouseout = () => {
 }
 phoneButton.onclick = () => {
     copyToClipboard('3038845392');
+}
+instaButton.onmouseover = () => {
+    instagram.style.display = 'block';
+}
+instaButton.onmouseout = () => {
+    instagram.style.display = 'none';
 }

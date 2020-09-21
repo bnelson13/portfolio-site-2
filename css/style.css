@@ -3,11 +3,11 @@
     margin: 0;
     padding: 0;
     font-family: 'Cairo', sans-serif;
-    /* border: 1px solid lightgray; */
 }
 
 .space-section {
     height: 200px;
+    position: relative;
 }
 
 .welcome-section {
@@ -45,18 +45,25 @@
 }
 
 .nav-bar {
-    position: absolute;
+    position: fixed;
+    width: 100%;
     font-family: Cairo;
+    text-align: center;
     font-size: 16px;
+    z-index: 10;
+    transition: all ease .5s;
+    /* border: 1px solid lightgray; */
 }
 
 .nav-bar ul {
-    display: flex;
+    display: inline-block;
     list-style: none;
     margin: 15px 0;
+    /* border: 1px solid lightgray; */
 }
 
 .nav-bar ul li {
+    display: inline;
     letter-spacing: .05em;
 }
 
@@ -68,6 +75,23 @@
 
 .nav-bar ul li a:hover {
     color: rgba(255, 255, 255, 0.5);
+}
+
+
+.nav-highlight {
+    background: white;
+    opacity: 1;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+
+.nav-highlight ul li a{
+    color: #3498DB;
+}
+
+.nav-highlight ul li a:hover {
+    color: #2978ac;
 }
 
 @keyframes bgChange {
@@ -207,14 +231,15 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    transform: translateY(15px);
+    transform: translateY(25px);
     opacity: 0;
     transition: all 1s ease;
 }
 
-.active-observe {
-    transform: translateY(-35px);
-    opacity: 1;
+.card-active {
+    transform: translateY(-35px) !important;
+    transition: all 1s ease;
+    opacity: 1 !important;
 }
 
 .info-card-heading {
@@ -292,13 +317,8 @@
 
 .resume-pdf {
     width: 100%;
-    height: 30px;
     display: flex;
-    align-items: center;
-    position: absolute;
-    z-index: 3;
     justify-content: center;
-    transform: translateY(-120px);
 }
 
 #resume-button {
@@ -374,6 +394,16 @@
     animation: bgChange 120s ease-in-out infinite;
 }
 
+#portfolio-section-header {
+    display: block;
+    transform: translateY(160px);
+    text-align: center;
+}
+
+#portfolio-section-header h1 {
+    color: white;
+}
+
 #portfolio-link {
     position: relative;
     top: 150px;
@@ -439,6 +469,7 @@
 
 .card-description {
     padding: 0 15px 0 15px;
+    background: rgb(248, 248, 248);
     width: 100%;
     height: 100px;
     position: absolute;
@@ -523,11 +554,11 @@
 }
 
 .email-copy-info {
-    transform: translate(215px, -10px);
+    transform: translate(143px, 43px);
 }
 
 .phone-copy-info {
-    transform: translate(296px, -10px);
+    transform: translate(225px, 43px);
 }
 
 
@@ -543,13 +574,7 @@
     font-size: 20px;
 }
 
-#email-address {
-    display: none;
-    position: absolute;
-    transform: translateY(20px);
-}
-
-#phone-number{
+.contact-hover p {
     display: none;
     position: absolute;
     transform: translateY(20px);
@@ -590,21 +615,106 @@ footer {
     align-content: center;
 }
 
-#bottom-nav {
-    transform: translateY(180px);
+.bottom-nav-bar {
+    width: 100%;
+    transform: translateY(50px);
+    font-family: Cairo;
+    text-align: center;
+    font-size: 16px;
+    z-index: 10;
+    transition: all ease .5s;
 }
 
+.bottom-nav-bar ul {
+    display: inline-block;
+    list-style: none;
+    margin: 15px 0;
+}
+
+.bottom-nav-bar ul li {
+    display: inline;
+    letter-spacing: .05em;
+}
+
+.bottom-nav-bar ul li a {
+    text-decoration: none;
+    padding: 0 50px;
+    color: white;
+}
+
+.bottom-nav-bar ul li a:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
+    .nav-bar ul li a {
+        padding: 0 6px;
+    }
+    .contact-icons ul li {
+        margin: 0 8px;
+    }
+    #typewrite {
+        font-size: 3rem;
+    }
+    .section-about {
+        padding: 0 3px;
+    }
+    .about-section {
+        height: 980px;
+    }
+    .about-info-wrap {
+        margin: 50px auto;
+        display: block;
+        max-width: 500px;
+    }
+    .info-card-icon {
+        display: none;
+    }
+    .resume-section {
+        height: 800px;
+    }
+    #value-break {
+        display: none;
+    }
+    .resume-timeline {
+        display: block;
+        max-width: 400px;
+    }
+    #resume-button {
+        transform: translateY(-120px);
+    }
+    .portfolio-cards {
+        grid-template-columns: 1fr;
+    }
+    .portfolio-section {
+        height: 2500px;
+    }
+    .portfolio-card {
+        width: 270px;
+        margin: 20px auto;
+    }
+    .bottom-nav-bar ul li a {
+        padding: 0 6px;
+    }
 }
-
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 355px) {
+    .about-section {
+        height: 900px;
+    }
+    .portfolio-card {
+        width: 300px;
+    }
+}
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .nav-bar ul li a {
-        padding: 0 30px;
-    }
 
+    .nav-bar ul li a {
+        padding: 0 20px;
+    }
+    .about-section {
+        height: 1090px;
+    }
     .about-info-wrap {
         display: block;
         max-width: 500px;
@@ -612,21 +722,23 @@ footer {
     #info-card-2 {
         margin: 40px 0;
     }
-    .about-section {
-        height: 1090px;
+    #resume-button {
+        transform: translateY(-120px);
     }
-    .resume-section {
-        height: 600px;
-    }
-    .resume-timeline {
+    #value-break {
         display: block;
-        max-width: 400px;
     }
     .portfolio-cards {
         grid-template-columns: 1fr;
     }
     .portfolio-section {
         height: 2800px;
+    }
+    .contact-icons ul li {
+        margin: 0 20px;
+    }
+    .bottom-nav-bar ul li a {
+        padding: 0 20px;
     }
 }
 
@@ -656,11 +768,17 @@ footer {
     .resume-section {
         height: 500px;
     }
+    #resume-button {
+        transform: translateY(-50px);
+    }
     .portfolio-cards {
         grid-template-columns: 1fr 1fr;
     }
     .portfolio-section {
         height: 1600px;
+    }
+    .bottom-nav-bar ul li a {
+        padding: 0 50px;
     }
 }
 
@@ -684,7 +802,6 @@ footer {
     .about-section {
         height: 800px;
     }
-
     .portfolio-cards {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -705,3 +822,5 @@ footer {
         height: 600px;
     }
 }
+
+/* Viewport breaks are at 1200, 992, 768, & 600 */
