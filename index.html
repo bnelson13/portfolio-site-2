@@ -1,158 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
     <title>Brad Nelson - Portfolio</title>
-</head>
-<body>
-    <section class="welcome-section" id='top-link'>
-        <div class="nav-bar">
-            <ul>
-                <li><a href="#about-link">About</a></li>
-                <li><a href="#resume-link">Resume</a></li>
-                <li><a href="#portfolio-link">Portfolio</a></li>
-                <li><a href="#contact-link">Contact</a></li>
-            </ul>
-        </div>
-        <div class="welcome-hello">
-            <h1 id='typewrite'>&nbsp</h1>
-        </div>
-        <a id='welcome-down-link' href="#about-link">
-            <svg class='welcome-down-svg-off' xmlns="http://www.w3.org/2000/svg" width='35' height='16' id='down-svg'>
-                <path d='M33.527 1.263L17.263 14.107 1 1.263' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'></path>
-            </svg>
-        </a>
-        <div class="svg-div">
-            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 150" preserveAspectRatio="none">
-                <path fill="#ffffff" fill-opacity="1" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path>
-            </svg>
-        </div>
+  </head>
+  <body>
+    <section class="welcome-section" id="top-link">
+      <div class="nav-bar">
+        <ul>
+          <li><a href="#about-link">About</a></li>
+          <li><a href="#resume-link">Resume</a></li>
+          <li><a href="#portfolio-link">Portfolio</a></li>
+          <li><a href="#contact-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="welcome-hello">
+        <h1 id="typewrite">&nbsp</h1>
+      </div>
+      <a id="welcome-down-link" href="#about-link">
+        <svg class="welcome-down-svg-off" xmlns="http://www.w3.org/2000/svg" width="35" height="16" id="down-svg">
+          <path
+            d="M33.527 1.263L17.263 14.107 1 1.263"
+            fill="none"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+      </a>
+      <div class="svg-div">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 150" preserveAspectRatio="none">
+          <path
+            fill="#ffffff"
+            fill-opacity="1"
+            d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+          ></path>
+        </svg>
+      </div>
     </section>
 
     <section class="about-section space-section">
-        <div id='about-link'style="position: absolute; top: -50px; left: 0"></div>
-        <div class="section-header">
-            <h1>About Me</h1>
+      <div id="about-link" style="position: absolute; top: -50px; left: 0"></div>
+      <div class="section-header">
+        <h1>About Me</h1>
+      </div>
+      <div class="section-about">
+        <p>
+          I am a front-end developer with a sincere<br />
+          passion for creating intuitive, dynamic design
+        </p>
+      </div>
+      <div class="about-info-wrap">
+        <div class="info-card" id="info-card-1">
+          <div class="info-card-icon"><img src="./img/icon-html.png" alt="HTML/CSS" /></div>
+          <div class="info-card-heading">HTML / CSS</div>
+          <div class="info-card-paragraph">
+            Experience structruing websites with HTML and design concepts using CSS, SVG and animations. Have applied
+            color theory and UI/UX concepts to further my web design capabilities
+          </div>
         </div>
-        <div class="section-about">
-            <p>I am a front-end developer with a sincere<br> passion for creating intuitive, dynamic design</p>
+        <div class="info-card" id="info-card-2">
+          <div class="info-card-icon"><img src="./img/icon-javascript.png" alt="Javascript" /></div>
+          <div class="info-card-heading">Javascript</div>
+          <div class="info-card-paragraph">
+            Experience with JavaScript and Node.js, asynchornous programming, Webpack bundler, server-side framwork
+            Express, and learning to develop web-based applications in React
+          </div>
         </div>
-        <div class="about-info-wrap">
-            <div class="info-card" id='info-card-1'>
-                <div class="info-card-icon"><img src="./img/icon-html.png" alt="HTML/CSS"></div>
-                <div class="info-card-heading">HTML / CSS</div>
-                <div class="info-card-paragraph">Experience structruing websites with HTML and design concepts using CSS, SVG and animations. Have applied color theory and UI/UX concepts to further my web design capabilities</div>
-            </div>
-            <div class="info-card" id='info-card-2'>
-                <div class="info-card-icon"><img src="./img/icon-javascript.png" alt="Javascript"></div>
-                <div class="info-card-heading">Javascript</div>
-                <div class="info-card-paragraph">Experience with JavaScript and Node.js, asynchornous programming, Webpack bundler, server-side framwork Express, and learning to develop web-based applications in React</div>
-            </div>
-            <div class="info-card" id='info-card-3'>
-                <div class="info-card-icon"><img src="/img/icon-management.png" alt="Management"></div>
-                <div class="info-card-heading">Management</div>
-                <div class="info-card-paragraph">Experience with project development & management, oversaw a team of junior managers and 60+ employees, self-started 2 companies, and honed presentation skills</div>
-            </div>
+        <div class="info-card" id="info-card-3">
+          <div class="info-card-icon"><img src="/img/icon-management.png" alt="Management" /></div>
+          <div class="info-card-heading">Management</div>
+          <div class="info-card-paragraph">
+            Experience with project development & management, oversaw a team of junior managers and 60+ employees,
+            self-started 2 companies, and honed presentation skills
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="resume-section space-section">
-        <div id='resume-link'style="position: absolute; top: -50px; left: 0"></div>
-        <div class="section-header">
-            <h1>Resume</h1>
+      <div id="resume-link" style="position: absolute; top: -50px; left: 0"></div>
+      <div class="section-header">
+        <h1>Resume</h1>
+      </div>
+      <div class="section-about">
+        <p>
+          My background in hospitality has made me value<br id="value-break" />
+          service along with hard work and perserverance
+        </p>
+      </div>
+      <div class="resume-timeline">
+        <div class="resume-item">
+          <h4>Owner</h4>
+          <p>
+            Fresh Eats Catering serviced Colorado business with deliveries up to 100 people with fresh, organic
+            breakfast and lunch options
+          </p>
         </div>
-        <div class="section-about">
-            <p>My background in hospitality has made me value<br id="value-break"> service along with hard work and perserverance</p>
+        <div class="resume-item">
+          <h4>Manager</h4>
+          <p>
+            Managed 3 seperate departments at Hyatt Corporation including the Reservations & PBX department, Restuarant,
+            Bar and In Room Dining departments
+          </p>
         </div>
-        <div class="resume-timeline">
-            <div class="resume-item">
-                <h4>Owner</h4>
-                <p>Fresh Eats Catering serviced Colorado business with deliveries up to 100 people with fresh, organic breakfast and lunch options</p>
-            </div>
-            <div class="resume-item">
-                <h4>Manager</h4>
-                <p>Managed 3 seperate departments at Hyatt Corporation including the Reservations & PBX department, Restuarant, Bar and In Room Dining departments</p>
-            </div>
-            <div class="resume-item">
-                <h4>Developer</h4>
-                <p>Building websites for clients using HTML, CSS, JavaScript, Node.js, Webpack, Express, and soon web applications using React.js</p>
-            </div>
+        <div class="resume-item">
+          <h4>Developer</h4>
+          <p>
+            Building websites for clients using HTML, CSS, JavaScript, Node.js, Webpack, Express, and soon web
+            applications using React.js
+          </p>
         </div>
-        <svg class='timeline-svg' xmlns="http://www.w3.org/2000/svg" height="30px" width="100%">
-            <circle id='circ1' cx="25%" cy="50%" r="0" fill="#3498DB"/>
-            <rect id='rect1' x="25%" y="50%" width="0%" height="5%" fill="#3498DB" />
-            <circle id='circ2' cx="50%" cy="50%" r="0" fill="#3498DB"/>
-            <rect id='rect2' x="50%" y="50%" width="0%" height="5%" fill="#3498DB" />
-            <circle id='circ3' cx="75%" cy="50%" r="0" fill="#3498DB"/>
-            <animate xlink:href='#circ1' attributeName='r' from='0' to='10' dur='.5s' begin='indefinite' id='circ1a' fill='freeze' />
-            <animate xlink:href='#rect1' attributeName='width' from='0%' to='25%' dur='1s' begin='circ1a.end' id='rect1a' fill='freeze' />
-            <animate xlink:href='#circ2' attributeName='r' from='0' to='10' dur='.5s' begin='rect1a.end' id='circ2a' fill='freeze' />
-            <animate xlink:href='#rect2' attributeName='width' from='0%' to='25%' dur='1s' begin='circ2a.end' id='rect2a' fill='freeze' />
-            <animate xlink:href='#circ3' attributeName='r' from='0' to='10' dur='.5s' begin='rect2a.end' id='circ3a' fill='freeze' />
+      </div>
+      <svg class="timeline-svg" xmlns="http://www.w3.org/2000/svg" height="30px" width="100%">
+        <circle id="circ1" cx="25%" cy="50%" r="0" fill="#3498DB" />
+        <rect id="rect1" x="25%" y="50%" width="0%" height="5%" fill="#3498DB" />
+        <circle id="circ2" cx="50%" cy="50%" r="0" fill="#3498DB" />
+        <rect id="rect2" x="50%" y="50%" width="0%" height="5%" fill="#3498DB" />
+        <circle id="circ3" cx="75%" cy="50%" r="0" fill="#3498DB" />
+        <animate
+          xlink:href="#circ1"
+          attributeName="r"
+          from="0"
+          to="10"
+          dur=".5s"
+          begin="indefinite"
+          id="circ1a"
+          fill="freeze"
+        />
+        <animate
+          xlink:href="#rect1"
+          attributeName="width"
+          from="0%"
+          to="25%"
+          dur="1s"
+          begin="circ1a.end"
+          id="rect1a"
+          fill="freeze"
+        />
+        <animate
+          xlink:href="#circ2"
+          attributeName="r"
+          from="0"
+          to="10"
+          dur=".5s"
+          begin="rect1a.end"
+          id="circ2a"
+          fill="freeze"
+        />
+        <animate
+          xlink:href="#rect2"
+          attributeName="width"
+          from="0%"
+          to="25%"
+          dur="1s"
+          begin="circ2a.end"
+          id="rect2a"
+          fill="freeze"
+        />
+        <animate
+          xlink:href="#circ3"
+          attributeName="r"
+          from="0"
+          to="10"
+          dur=".5s"
+          begin="rect2a.end"
+          id="circ3a"
+          fill="freeze"
+        />
+      </svg>
+      <div class="resume-pdf">
+        <button id="resume-button">View Resume</button>
+      </div>
+      <div class="svg-div" id="resume-svg-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 150" preserveAspectRatio="none">
+          <path
+            fill="#ffffff"
+            fill-opacity="1"
+            d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+          ></path>
         </svg>
-        <div class="resume-pdf">
-            <button id='resume-button'>View Resume</button>
-        </div>
-        <div class="svg-div" id='resume-svg-bottom'>
-            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 150" preserveAspectRatio="none">
-                <path fill="#ffffff" fill-opacity="1" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path>
-            </svg>
-        </div>
+      </div>
     </section>
 
     <section class="portfolio-section space-section">
-        <div id='portfolio-link'style="position: absolute; top: -50px; left: 0"></div>
-        <div class="section-header" id="portfolio-section-header">
-            <h1>Portfolio</h1>
-        </div>
-        <svg class="defs-only">
-            <filter id="monochrome" color-interpolation-filters="sRGB"
-                    x="0" y="0" height="100%" width="100%">
-              <feColorMatrix type="matrix"
-                values="0.95 0 0 0 0.05 
+      <div id="portfolio-link" style="position: absolute; top: -50px; left: 0"></div>
+      <div class="section-header" id="portfolio-section-header">
+        <h1>Portfolio</h1>
+      </div>
+      <svg class="defs-only">
+        <filter id="monochrome" color-interpolation-filters="sRGB" x="0" y="0" height="100%" width="100%">
+          <feColorMatrix
+            type="matrix"
+            values="0.95 0 0 0 0.05 
                         0.85 0 0 0 0.15  
                         0.50 0 0 0 0.50 
-                        0    0 0 1 0" />
-            </filter>
-        </svg>
-        <div class="portfolio-cards">
-            <div class="portfolio-card" id="card-1">
-                <img class='card-pic' src="/img/card-weekstrend.png" alt="">
-                <div class="card-description">
-                    <h3>Weekstrend</h3>
-                    <h4>A weekly curated lifestyle blog</h4>
-                    <p>A weekly blog that is a curated list of different mediums with popular or intersting links.</p>
-                    <a href='https://www.weekstrend.com/' target="_blank" class='card-button'>Visit Website</a>
-                    <a href='https://github.com/bnelson13/weeks-trend' target="_blank" class='card-button'>Visit GitHub</a>
-                </div>
-            </div>
-            <div class="portfolio-card" id="card-2">
-                <img class='card-pic' src="/img/card-trip.png" alt="">
-                <div class="card-description">
-                    <h3>Trip Planner</h3>
-                    <h4>A weekly curated lifestyle blog</h4>
-                    <p>A weekly blog that is a curated list of different mediums with popular or intersting links.</p>
-                    <a href='https://github.com/bnelson13/travel-app' target="_blank" class='card-button'>Visit GitHub</a>
-                </div>
-            </div>
-            <div class="portfolio-card" id="card-3">
-                <img class='card-pic' src="/img/card-spruce.png" alt="">
-                <div class="card-description">
-                    <h3>Spruce Sauce</h3>
-                    <h4>A weekly curated lifestyle blog</h4>
-                    <p>A weekly blog that is a curated list of different mediums with popular or intersting links.</p>
-                    <!-- <a href='https://www.sprucesauce.ga/' target="_blank" class='card-button'>Visit Website</a> -->
-                    <a href='https://github.com/bnelson13/spruce-sauce' target="_blank" class='card-button'>Visit GitHub</a>
-                </div>
-            </div>
-            <div class="portfolio-card" id="card-4">
+                        0    0 0 1 0"
+          />
+        </filter>
+      </svg>
+      <div class="portfolio-cards">
+        <div class="portfolio-card" id="card-1">
+          <img class="card-pic" src="/img/card-weekstrend.png" alt="" />
+          <div class="card-description">
+            <h3>Weekstrend</h3>
+            <h4>A weekly curated lifestyle blog</h4>
+            <p>A weekly blog that is a curated list of different mediums with popular or intersting links.</p>
+            <a href="https://www.weekstrend.com/" target="_blank" class="card-button">Visit Website</a>
+            <a href="https://github.com/bnelson13/weeks-trend" target="_blank" class="card-button">Visit GitHub</a>
+          </div>
+        </div>
+        <div class="portfolio-card" id="card-2">
+          <img class="card-pic" src="/img/card-spruce.png" alt="" />
+          <div class="card-description">
+            <h3>Spruce Sauce</h3>
+            <h4>A website for a hotsauce</h4>
+            <p>The site is for a kiwi jalapeno hotsauce that I developed over the last year and sell</p>
+            <a href="http://www.sprucesauce.com/" target="_blank" class="card-button">Visit Website</a>
+            <!-- <a href="https://github.com/bnelson13/spruce-sauce" target="_blank" class="card-button">Visit GitHub</a> -->
+          </div>
+        </div>
+        <div class="portfolio-card" id="card-3">
+          <img class="card-pic" src="/img/card-trip.png" alt="" />
+          <div class="card-description">
+            <h3>Trip Planner</h3>
+            <h4>A weekly curated lifestyle blog</h4>
+            <p>A weekly blog that is a curated list of different mediums with popular or intersting links.</p>
+            <a href="https://github.com/bnelson13/travel-app" target="_blank" class="card-button">Visit GitHub</a>
+          </div>
+        </div>
+
+        <!-- <div class="portfolio-card" id="card-4">
                 <img class='card-pic' src="/img/card-hcp.png" alt="">
                 <div class="card-description">
                     <h3>HCP</h3>
@@ -161,8 +249,8 @@
                     <a href='https://www.hcpricing.ga/' target="_blank" class='card-button'>Visit Website</a>
                     <a href='https://www.github.com/' target="_blank" class='card-button'>Visit GitHub</a>
                 </div>
-            </div>
-            <div class="portfolio-card" id="card-5">
+            </div> -->
+        <!-- <div class="portfolio-card" id="card-5">
                 <img class='card-pic' src="/img/card-evaluate.png" alt="">
                 <div class="card-description">
                     <h3>Article Evaluater</h3>
@@ -170,87 +258,111 @@
                     <p>A weekly blog that is a curated list of different mediums with popular or intersting links.</p>
                     <a href='https://github.com/bnelson13/evaluate-article' target="_blank" class='card-button'>Visit GitHub</a>
                 </div>
-            </div>
-            <div class="portfolio-card" id="card-6">
+            </div> -->
+        <!-- <div class="portfolio-card" id="card-6">
                 <img class='card-pic' src="/img/card-apteryx.png" alt="">
                 <div class="card-description">
                     <h3>Apteryx Designs</h3>
                     <h4>A weekly curated lifestyle blog</h4>
                     <p>A weekly blog that is a curated list of different mediums with popular or intersting links.</p>
-                    <!-- <a href='https://www.apteryx.ga/' target="_blank" class='card-button'>Visit Website</a> -->
+                    <a href='https://www.apteryx.ga/' target="_blank" class='card-button'>Visit Website</a>
                     <a href='https://www.github.com/' target="_blank" class='card-button'>Visit GitHub</a>
                 </div>
-            </div>
-        </div>
-        <div class="svg-div" id='portfolio-svg-bottom'>
-            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 150" preserveAspectRatio="none">
-                <path fill="#ffffff" fill-opacity="1" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path>
-            </svg>
-        </div>
+            </div> -->
+      </div>
+      <div class="svg-div" id="portfolio-svg-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 150" preserveAspectRatio="none">
+          <path
+            fill="#ffffff"
+            fill-opacity="1"
+            d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+          ></path>
+        </svg>
+      </div>
     </section>
 
     <section class="contact-section space-section">
-        <div id='contact-link'style="position: absolute; top: -50px; left: 0"></div>
-        <div class="section-header">
-            <h1>Contact Me</h1>
-        </div>
-        <div class="face-img">
-            <img src="/img/brads-face.png" title="Brad's Face">
-        </div>
-        <div class="contact-icons">
-            <ul>
-                <li><a href="https://github.com/bnelson13" target="_blank" id='git-hover'>
-                    <img src="/img/logo-github.png" alt="Github Logo">
-                </a></li>
-                <li><a href="https://www.linkedin.com/in/bnelson13/" target="_blank" id='linked-hover'>
-                    <img src="/img/logo-linkedin.png" alt="LinkedIn Logo">
-                </a></li>
-                <li><div class='contact-button' id="email-hover">
-                    <img src="/img/logo-email.png" alt="Copy to Clipboard">
-                </div></li>
-                <p class="hover-info email-copy-info">Click to copy to Clipboard</p>
-                <li><div class='contact-button' id='phone-hover'>
-                    <img src="/img/logo-phone.png" alt="Copy to Clipboard">
-                </div></li>
-                <p class="hover-info phone-copy-info">Click to copy to Clipboard</p>
-                <li><a href="https://www.instagram.com/nelsonbrad/" target="_blank" id='insta-hover'>
-                    <img src="/img/logo-instagram.png" alt="Instagram Logo">
-                </a></li>
-            </ul>
-        </div>
-        <div class="contact-hover">
-            <p id="git-hub">GitHub Profile</p>
-            <p id="linked-in">LinkedIn Profile</p>
-            <p id='email-address'>bnelson13@gmail.com</p>
-            <p id="phone-number">303.884.5392</p>
-            <p id="instagram">Instagram Profile</p>
-        </div>
-        <div class="svg-div" id='contact-svg-bottom'>
-            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 150" preserveAspectRatio="none">
-                <path fill="#ffffff" fill-opacity="1" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path>
-            </svg>
-        </div>
+      <div id="contact-link" style="position: absolute; top: -50px; left: 0"></div>
+      <div class="section-header">
+        <h1>Contact Me</h1>
+      </div>
+      <div class="face-img">
+        <img src="/img/brads-face.png" title="Brad's Face" />
+      </div>
+      <div class="contact-icons">
+        <ul>
+          <li>
+            <a href="https://github.com/bnelson13" target="_blank" id="git-hover">
+              <img src="/img/logo-github.png" alt="Github Logo" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/bnelson13/" target="_blank" id="linked-hover">
+              <img src="/img/logo-linkedin.png" alt="LinkedIn Logo" />
+            </a>
+          </li>
+          <li>
+            <div class="contact-button" id="email-hover">
+              <img src="/img/logo-email.png" alt="Copy to Clipboard" />
+            </div>
+          </li>
+          <p class="hover-info email-copy-info">Click to copy to Clipboard</p>
+          <li>
+            <div class="contact-button" id="phone-hover">
+              <img src="/img/logo-phone.png" alt="Copy to Clipboard" />
+            </div>
+          </li>
+          <p class="hover-info phone-copy-info">Click to copy to Clipboard</p>
+          <li>
+            <a href="https://www.instagram.com/nelsonbrad/" target="_blank" id="insta-hover">
+              <img src="/img/logo-instagram.png" alt="Instagram Logo" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="contact-hover">
+        <p id="git-hub">GitHub Profile</p>
+        <p id="linked-in">LinkedIn Profile</p>
+        <p id="email-address">bnelson13@gmail.com</p>
+        <p id="phone-number">303.884.5392</p>
+        <p id="instagram">Instagram Profile</p>
+      </div>
+      <div class="svg-div" id="contact-svg-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 150" preserveAspectRatio="none">
+          <path
+            fill="#ffffff"
+            fill-opacity="1"
+            d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+          ></path>
+        </svg>
+      </div>
     </section>
 
-    <a id='top-link-button' href="#top-link">
-        <svg class='top-link-svg' xmlns="http://www.w3.org/2000/svg" width='35' height='16'>
-            <path d='M33.527 1.263L17.263 14.107 1 1.263' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'></path>
-        </svg>
+    <a id="top-link-button" href="#top-link">
+      <svg class="top-link-svg" xmlns="http://www.w3.org/2000/svg" width="35" height="16">
+        <path
+          d="M33.527 1.263L17.263 14.107 1 1.263"
+          fill="none"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+      </svg>
     </a>
 
     <footer>
-        <div class="bottom-nav-bar">
-            <ul>
-                <li><a href="#about-link">About</a></li>
-                <li><a href="#resume-link">Resume</a></li>
-                <li><a href="#portfolio-link">Portfolio</a></li>
-                <li><a href="#contact-link">Contact</a></li>
-            </ul>
-        </div>
+      <div class="bottom-nav-bar">
+        <ul>
+          <li><a href="#about-link">About</a></li>
+          <li><a href="#resume-link">Resume</a></li>
+          <li><a href="#portfolio-link">Portfolio</a></li>
+          <li><a href="#contact-link">Contact</a></li>
+        </ul>
+      </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src='./js/app.js'></script>
-</body>
+    <script src="./js/app.js"></script>
+  </body>
 </html>
